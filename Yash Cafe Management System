@@ -1,0 +1,34 @@
+#Yash Cafes Management System >>
+
+Menu= {
+    'pasta':90,
+    'salad':48,
+    'Pizza':120,
+    'Burger':77,
+    'Coffee':55,
+    'Pestry':80,
+}
+
+print("Welcome to the Yash Cafe's.")
+print("pasta:90\nsalad:48\nPizza:120\nBurger:77\nCoffee:55\nPestry:80")
+
+order_total=0
+
+item_1 =input("enter the name of item you wont to order:")
+if item_1 in Menu:
+  order_total +=Menu[item_1]
+  print(f"Your item {item_1} has been added to your order")
+
+else:
+  print(f"ordered item {item_1} is not available Yet !")
+
+item_2 =input("Enter the name of item you wont to order:")
+if item_2 in Menu:
+  order_total +=Menu[item_2]
+  print(f"Your item {item_2} has been added to your order")
+
+else:
+  print(f"ordered item {item_2} is not available Yet !")
+
+print(f"the total amount of items to pay is\n{order_total} ")
+print("thank you and Visit Again Yash Cafes")
