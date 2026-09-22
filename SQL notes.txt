@@ -1,0 +1,282 @@
+# Database: Database is collection of data in a format that can be easily accessed (Digital).
+A Software application used to manage our DB is called DBMS(DATABSE MANAGEMENT SYSTEM).
+  
+     USER---> DBMS--> DB-->
+
+
+
+
+#Types of Database:
+1)Relational Database 
+2)Non-relational (NoSQL)
+
+
+
+
+#Relational Database:
+data stored in tables.
+Ex.. (MYSQL,ORACLE,SQL SERVER,POSTGRE SQL.) 
+
+
+
+
+#Non-relational (NoSQL)
+Data Not stored in tables.
+Ex....( Mongo DB)
+
+
+
+
+# what is Sql?
+ -->SQL is Structure Query Language.
+SQL is a programing language used to intreact with relational database.
+it is used to perform CRUD operations:
+.CREATE 
+.READ
+.UPDATE
+.DELETE 
+
+
+  #IBM company  manifaruted SQL.
+
+
+#vertical (|) Columns --> schema (Design ) 
+#horizntal(-->) Rows --> individual data 
+
+
+
+
+
+
+ #datatypes in MYSQL
+They define the types Of values that can be stored in a column.
+#(CHAR, VARCHAR ,BLOB , INT, TINYINT, BIGINT ,BIT ,FLOAT, DOUBLE ,BOOLEAN ,DATE , YEAR)
+
+
+
+
+
+
+# Types of SQL commands:
+DDL(data Definition language.)
+--> create, alter,rename,truncate,drop
+
+
+DQL(data Query Language. )
+--> select 
+
+
+DML(data manipulate language.)
+-->insert,update,delete
+
+
+DCL(data control Language.)
+-->grant, revoke permission to users
+
+
+TCL(transaction control language.)
+-->rollback ,start transaction , commit 
+
+
+* (astricas)
+ 
+  
+#keys:
+Primary Key: 
+it is a column (or set of columns) in a table that uniquely identifies each Row. (a unique id)
+there is only 1 Primary key & it should be NOT NULL,
+#note: 
+only one 
+unique & not null
+
+
+  ## both are special columns##
+
+
+#Foreign Key:
+A foreign Key is a column(or set  of column) in a table that refer to the primary key 
+ there can be multiple foreign key.
+foreign key  can have duplicate &null values.
+
+
+#note:
+multiple 
+duplicate
+store null values
+
+
+
+
+#constraints:
+SQL constraints are used to specify rules for data in a table. 
+
+
+  
+
+
+Rhilet 
+
+
+  
+
+
+Select in details:
+
+
+
+
+
+
+
+
+#Where clause:
+            To define some condition.
+|| select *from student where city = "mumbai",||
+
+using operators in where,
+ # Arithmetic operators: + addition, subtraction, Multiplication,Division,Modulus
+
+
+##Modolus work (remainder) found use ..
+
+
+(((# Group by clause:
+Groups rows that have the same values  into summary Rows,
+it collects data from multiple records and group the result one or more column.
+
+
+--> generally we use group by with some aggregation function.
+
+
+count number of students in each city
+(select city, count(name)from student group by city;)  )))
+
+
+
+
+
+
+having clause:
+similar to where i.e .applies some condition on rows
+uesd when we want to apply any condition after grouping.
+
+
+
+
+count number of student in each city where max marks cross 90
+
+
+# Quary :
+select count(name),city 
+from student 
+group by city 
+having max (marks)>90;
+
+
+
+#clauses  writen order:
+1 select column(s)
+2 from table_name
+3 where  condition 
+4 group by coloumns(s)
+5 having condition 
+6 order by columns asc;
+
+
+where  condition  on rows
+having condition on groups
+
+
+
+
+
+
+
+
+Comparison operators: =(equal to), !(Not equal to) ,>,<,<=,>=
+ Logical operators: AND,OR,NOT,IN,BETWEEN,ALL,LIKE,ANY
+Bitwise operators: &(bitwise AND,) | (Bitwise OR)
+
+
+Operators:
+ AND: (to check for both conditions to be true.)
+
+
+ SELECT * FROM student WHERE marks > 90 AND city = "mumbai";
+
+
+OR:(to check for one of the conditons  to be true.)
+SELECT  * FROM student  where marks >90 OR city = "mumbai";
+
+
+#limit clause: 
+  sets an upper  limit on number  of (tuples) rows to be returned. 
+ SELECT * FROM student LIMIT 3 ;
+ (select col 1, col2, from table_name 
+limit  number;)
+
+
+#order by clause;
+ to sort in asending (ASC) or decending order (DESC)
+ ( select col 1, col2, from table_name order by col_name ASC; )
+
+
+12345 asending 
+54321 desending
+
+
+ 
+ # Aggregate functions: (Aggregate functions returns a single values.)
+Aggregate functions perform a calculation on a set of values, and return a single value,
+. COUNT()
+.MAX()
+.MIN()
+.SUM()
+.AVG()
+ syntax:
+ MAX:select max(marks) from student;
+AVG: select avg(marks) from student;
+
+
+
+
+ # select mode count(custmor)
+from company_t
+group by mode ;
+
+
+ # table releted Quaries:
+syntax:
+Update table_name
+set col1 = val1,col2=val2
+ where condition;
+
+
+#delete (to delete existing rows)
+ syntax:
+delete from table_name
+where condition;
+
+
+
+
+
+
+
+
+#  imp
+(set sql_safe_updates = 0 ; # Off (safe code off ))
+
+
+revisiting  fk (forigen key )
+
+
+
+
+
+
+
+
+
+
+
